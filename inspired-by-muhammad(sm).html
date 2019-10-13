@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RafsunSheikh</title>
+    <!-- add icon link -->
+        <link rel = "icon" href ="images/user.png" type = "image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">RafsunSheikh</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="index.html#home-section" class="nav-link"><span>Home</span></a></li>
+	          <!--<li class="nav-item"><a href="index.html#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="index.html#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="index.html#services-section" class="nav-link"><span>Services</span></a></li>
+	          <li class="nav-item"><a href="index.html#skills-section" class="nav-link"><span>Skills</span></a></li>
+	          <li class="nav-item"><a href="index.html#projects-section" class="nav-link"><span>Projects</span></a></li>-->
+	          <li class="nav-item"><a href="index.html#blog-section" class="nav-link"><span>My Blog</span></a></li>
+	          <li class="nav-item"><a href="index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+
+            <li class="nav-item logged-in" style="display: none;">
+            <a href="#" class="nav-link modal-trigger" data-target="modal-account">Account</a>
+          </li>
+          <li class="nav-item logged-in" style="display: none;">
+            <a href="#" class="nav-link" id="logout">Logout</a>
+          </li>
+          <li class="nav-item logged-out" style="display: none;">
+            <a href="#" class="nav-link modal-trigger" data-target="modal-login">Login</a>
+          </li>
+          <li class="nav-item logged-out" style="display: none;">
+            <a href="#" class="nav-link modal-trigger" data-target="modal-signup">Sign up</a>
+          </li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+
+
+
+      <!-- SIGN UP MODAL -->
+       <div id="modal-signup" class="modal">
+         <div class="modal-content">
+           <h4>Sign up</h4><br />
+           <form id="signup-form">
+             <div class="input-field">
+               <input type="email" id="signup-email" required />
+               <label for="signup-email">Email address</label>
+             </div>
+             <div class="input-field">
+               <input type="password" id="signup-password" required />
+               <label for="signup-password">Choose password</label>
+             </div>
+             <div class="input-field">
+               <input type="text" id="signup-name" required />
+               <label for="signup-name">Your Name</label>
+             </div>
+             <div class="input-field">
+               <input type="text" id="signup-address" required />
+               <label for="signup-address">Your Address</label>
+             </div>
+             <div class="input-field">
+               <input type="text" id="signup-phone" required />
+               <label for="signup-phone">Your Phone Number</label>
+             </div>
+             <div class="input-field">
+               <input type="text" id="signup-bio" required />
+               <label for="signup-bio">One Line Bio about You!</label>
+             </div>
+             <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+             <p class="error pink-text center-align"></p>
+           </form>
+         </div>
+       </div>
+       <!-- LOGIN MODAL -->
+       <div id="modal-login" class="modal">
+         <div class="modal-content">
+           <h4>Login</h4><br />
+           <form id="login-form">
+             <div class="input-field">
+               <input type="email" id="login-email" required />
+               <label for="login-email">Email address</label>
+             </div>
+             <div class="input-field">
+               <input type="password" id="login-password" required />
+               <label for="login-password">Your password</label>
+             </div>
+             <button class="btn yellow darken-2 z-depth-0">Login</button>
+             <p class="error pink-text center-align"></p>
+           </form>
+         </div>
+       </div>
+    <!-- ACCOUNT MODAL -->
+    <div id="modal-account" class="modal">
+      <div class="modal-content center-align">
+        <h4>Account details</h4><br />
+        <div class="account-details"></div>
+      </div>
+    </div>
+    <!-- CREATE GUIDE MODAL -->
+    <div id="modal-create" class="modal">
+      <div class="modal-content">
+        <h4>Leave us comment</h4><br />
+        <form id="create-form">
+          <div class="input-field">
+            <input type="text" id="title" required>
+            <label for="title">Your Name</label>
+          </div>
+          <div class="input-field">
+            <textarea id="content" class="materialize-textarea" required></textarea>
+            <label for="content">Comment</label>
+          </div>
+          <button class="btn yellow darken-2 z-depth-0">Create</button>
+        </form>
+      </div>
+    </div>
+
+
+
+
+       <!-- Comment LIST
+    <div class="container logged-in" style="margin-top: 40px;">
+        <ul class="collapsible z-depth-0 guides" style="border: none;">
+
+        </ul>
+      </div>-->
+
+
+<!--Main Content-->
+	  <section class="hero-wrap js-fullheight" style="background-image: url('images/muhammad2.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
+            <h1 class="mb-3 bread">Inspired By Muhammad(SM)</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="blog.html">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>Inspired by Muhammad(SM)<i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
+
+
+
+            <h2 class="mb-3 mt-5">The orphan</h2>
+            <p>
+Muhammad was born in 570 in Mecca, modern day Saudi Arabia, to a single mother whose husband died before she gave birth. Muhammad was of noble blood, and it was the custom for those children of higher social standing to have a wet nurse. A Bedouin woman named Halima cared for him, and took him into the harsh desert to live with her people. For such a young child it was a challenging environment. But it was here that Muhammad would develop his first close connection with nature, and spend most of his time in solitude contemplating the world around him.
+
+He returned to his mother, Amina, who took him to visit his father’s grave, but on the return journey she fell dangerously ill. Muhammad was barely six years old when he faced the loss of another parent. Later his own experience would help him to encourage compassion for orphans, telling his companions that kindness shown to parentless children would grant them Paradise.</p>
+            <p>
+              <img src="images/muhammad1.jpg" alt="" class="img-fluid">
+            </p>
+            <h2 class="mb-3 mt-5">The shepherd and the businessman</h2>
+            <p>
+Muhammad went to live with his grandfather Abdul Muttalib, and spent two happy years with him, until he died when Muhammad was eight years old. Again he had to face emotional and physical upheaval, moving to live with his uncle Abu Talib. As a young boy, Muhammad earned his living as a shepherd, a role he was later to speak about with fondness: “All the prophets of God were shepherds”. Later he would become renowned for his honest dealing with people in business and trade.
+</p>
+<h2 class="mb-3 mt-5">The husband</h2>
+<p>
+A wealthy businesswoman named Khadijah requested Muhammad’s expertise in negotiating a business venture for her. When she heard of how he secured more than she expected, she was impressed and made enquiries about his character. On hearing the accounts of his generous and noble nature, she sent a proposal to the 25 year old man. Khadijah was a widow some fifteen years older than Muhammad, and had children from two previous marriages; she was intelligent, independent and kind. Muhammad accepted her offer. Khadijah and Muhammad’s marriage was a happy and harmonious one: they consulted, supported and cared for each other in equal measure. She was his first love, the first he turned to for support, and the first to acknowledge his prophethood. They had four daughters together who they cherished, and two sons, but they tragically both died in infancy.</p>
+<p>
+  <img src="images/muhammad3.jpg" alt="" class="img-fluid">
+</p>
+<h2 class="mb-3 mt-5">The Revelation</h2>
+<p>Muhammad had always treated those around him with honour, kindness and respect. Yet he was troubled. Troubled by the injustices he saw around him of backward tribal practices – of female infanticide, of oppression of the vulnerable and of inequality. He had distanced himself from ignorance, superstition and the practice of idol worship. He often retreated to a cave on the mountain of Hira to reflect, wondering what he could do to change such deep-rooted customs.
+
+The cave on Mount HiraIt was now 610, Muhammad was only aged forty but at a point in his life where he had already faced great sorrows: losing both his parents at an early age, his grandfather and two young sons. One night, when he again went to the secluded cave to be alone with his thoughts, he encountered an experience that would dramatically change his life, his society and the wider world.
+
+ “Read!” a voice called out him. It was the angel Gabriel. Muhammad was frightened but responded he could not read –  indeed he did not know how to read or write. Again Gabriel commanded him to read, and a third time said “Read! In the name of your Sustainer. He who taught man by the pen that which he did not know.” Following this divine visitation, Muhammad went immediately to the only person he could relate what had happened and find solace in: his wife. He was shaking violently from the experience; Khadijah wrapped him in a covering and comforted him. This was the first of many revelations that would come to him over a period of twenty three years.</p>
+<h2 class="mb-3 mt-5">The Message</h2>
+<p>
+Door of the Prophet's MosqueGod had chosen Muhammad as his final messenger, the last in a line of many prophets before him, like Abraham, Moses, Joseph, and Jesus. All had brought the message of worshipping One God, of enjoining good and forbidding bad. But this message had become corrupted by men, and the moment had come once more to bring people back towards the truth. The Quran emphasised the belief in the Oneness of God, related the creation of the heavens and the earth, stories of past prophets, the equality and sanctity of humanity, and the etiquettes of human behaviour.</p>
+<h2 class="mb-3 mt-5">Trials</h2>
+<p>
+Muhammad had a great task ahead of him. In preaching God’s word, he would come face to face with rejection, abuse, humiliation and even banishment from his own people. He had to overturn his society’s backward practices, instructing them to embrace a set of universal principles that would unite all the tribes, provide a benchmark for justice, would eradicate racism, encourage them in acts of charity, protect the vulnerable, abolish the rigid class system, raise the status of women to an honoured position, and bring everyone back to the belief in one God.
+
+But the leading tribe of the Meccans, the Quraysh, were staunch in their opposition. Muhammad had a small group of companions who believed in his message, and these supporters would be targeted by the Quraysh who embarked on a campaign of torture. The first to die for Islam was a woman named Sumayyah, who after enduring the cruelty inflicted on her, was finally stabbed to death. She is a woman held in high esteem by Muslims for her steadfastness and strength of character, and one of the few guaranteed Paradise.</p>
+<h2 class="mb-3 mt-5">Refuge</h2>
+<p>
+It was now 615 and the situation for the Muslims had not improved. Muhammad heard of a just and compassionate ruler in Abyssinia, a Christian king who might offer refuge for the Muslims and sent 100 Muslim men and women to be placed under the king’s protection. Muhammad did not hesitate to turn to those of other faiths for their protection, he trusted and worked with others who had moral standing and dealt with justice no matter what their faith or background. His own uncle, Abu Talib, whom he loved and respected greatly was not a Muslim, but he offered invaluable support to his nephew.</p>
+<h2 class="mb-3 mt-5">Exile</h2>
+<p>
+The Quraysh, unable to break this small but growing band of Muslims, who were growing in number by the day, resorted to banishing them, forbidding any tribes to help them. Tribes depended on each other for sustenance, trade and protection in the harsh desert environment, so this embargo would mean starvation, deprivation and vulnerability. The embargo went on for three years, during which Muhammad and his companions retreated to the valleys surrounding Mecca to live a very difficult life. The ban was finally lifted, but it had taken its toll on the Prophet’s beloved wife, Khadijah. She died soon afterwards in a year known as The Year of Sorrow.
+
+Muhammad’s grief was deep. He had lost his strongest supporter and confidante, the mother of his children. The same year, his uncle, who had been his protector, died in 620. Yet his mission was far from over, and he had the duty to continue his message and to protect those who had gathered around him. He thought of moving the Muslims far away from the relentless oppression of the Quraysh.</p>
+<h2 class="mb-3 mt-5">Night Journey</h2>
+<p>Every prophet has his miracle, and it is said that the Quran was Muhammad’s miracle. Yet the Night Journey joins the many miraculous stories about prophets before him – of Jesus’ birth, of Jonah and the Whale, of Moses’ parting of the Red Sea.
+
+Two years after the death of Khadijah, one evening Muhammad fell asleep by the Kaba and was awoken by the angel Gabriel who showed him a white, winged horse. They both mounted and began the journey to Jerusalem where he met a group of prophets; amongst them were Abraham and Moses. Muhammad led them in prayer at the Temple Mount. Then Muhammad again mounted the winged creature with Gabriel and went on a journey that transcended time and space through the seven heavens. It was at the highest level that he received instructions for the five daily prayers.
+
+Muhammad was profoundly affected by this spiritual and physical journey, seeing the wonders of the heavens, and meeting the brotherhood of prophets. Yet it was also a trial – when Muhammad recounted his experience, it left him open to more insults and jeers. Yet the lesson remained that true faith meant belief in the unseen and in the miracles of God.</p>
+<h2 class="mb-3 mt-5">marriage</h2>
+<p>It was the norm in Arabia for men to take many wives, but Muhammad remained monogamous to his first wife Khadijah throughout their marriage. A year after her death, he was encouraged to marry again. His subsequent marriages were formed for various reasons: to form alliances with other tribes in order to secure the survival of the Muslim community, to protect those who were threatened because of their faith, and to cement friendships. Many of his wives were widows with children, or divorcees. Aisha was the daughter of his closest friend Abu Bakr. Her marriage to Muhammad was arranged when she was very young, but their marriage was not consummated until she entered puberty. Aisha had an incredible intellect, and she became a respected scholar and was skilled in medical knowledge. She spoke of Muhammad’s kindness and generosity to all his wives, a quality that he insisted upon from every husband to their spouse. </p>
+<h2 class="mb-3 mt-5">Migration</h2>
+<p>
+The number of Muslims was growing, and along with it grew the need to live free of tyranny. Many people had embraced Islam in the city of Medina, some 200 miles from Mecca. Muhammad decided his companions should relocate to where they would enjoy the freedom of religious expression and the confidence of a being a real community. Agreements were made with the Jews, Christians and pagans of Medina, and all lived in protection, liberty and coexistence.</p>
+<h2 class="mb-3 mt-5">Conflict</h2>
+<p>
+The move was a blow to the pride of the Quraysh who still tormented the few Muslims who remained in Mecca. In addition to their persecution, they confiscated all their property and belongings to show Muhammad that he had not won. Incensed by news of this, Muhammad organised expeditions on Meccan caravans in order to take compensation. He also sent missions to find out information of the Quraysh’s plots – he knew that an attack was likely. Yet one mission resulted in the death of a Quraysh leader despite Muhammad’s clear instruction that no conflict was to take place. A clash was imminent.
+For the past thirteen years until this point, the Muslims were instructed in passive resistance, but a revelation now gave permission to fight those who oppressed them and had driven them from their homes.
+
+Muhammad had set off with over three hundred Muslims to intercept a caravan in order to take more goods in compensation, but the Quraysh found out about his plans and sent a thousand-strong army. The Muslims were not prepared for war, but they were determined to face their enemies. They won an incredible victory in what came to be known as the Battle of Badr.
+
+The conflict was not at an end however, and more wars took place between the Quraysh, their allies and the Muslims, the latter suffering many losses. Muhammad now had military and political power, sending a strong message that he and his people would not be trampled upon any further. As his influence increased, so too did attempts to assassinate him. </p>
+<h2 class="mb-3 mt-5">Conquest</h2>
+<p>
+After years of hostility, power shifted towards Muhammad and the Muslims, and a treaty was finally agreed between the Quraysh and Muhammad, but this was violated by the former and Muhammad marched on Mecca in 630. But he took Mecca without bloodshed, peaceably and with dignity. Muhammad was in a position of power to seek revenge on those who had tortured and persecuted the Muslims, but he did not abuse his power, choosing instead to conquer Mecca with profound humility. His great mercy and compassion deeply impressed the tribes of Mecca, and a great number embraced Islam.</p>
+<h2 class="mb-3 mt-5">The Farewell Pilgrimage</h2>
+<p>
+Muhammad, accompanied by one hundred thousand of his companions, performed the final pilgrimage of his life to the Kaba in Mecca. Standing on what is known as the Mount of Mercy, he delivered his last speech with messages that would resound through time. He spoke of the equality of humankind, of women’s rights, of fraternity, of doing good, of never oppressing anyone, of human rights and justice.</p>
+<h2 class="mb-3 mt-5">Final breath</h2>
+<p>
+Soon after the farewell sermon, Muhammad fell very ill with a fever which weakened him greatly. Though frail, he led his last prayer in the mosque in Medina, and repeated again and again that the poor and the vulnerable must be treated well. His final moments were with his wife Aisha. He rested his head in her lap while she stroked his head. Suddenly she felt his head become heavier. He had breathed his last breath.
+He died in 632 aged sixty three.</p>
+<h2 class="mb-3 mt-5">Legacy</h2>
+<p>
+Muhammad caused a revolution in the space of twenty three years, shaping the course of history. His commitment to the enduring values of justice, freedom, fraternity, charity and equality carried a universal message that prevails to this day. What began as a small band of followers in seventh century Arabia has now grown to a global community of 1.5 billion, a fifth of the world’s population.
+
+Muslims everywhere model their own lives on his behaviour, from prayer to politics, personal hygiene to community involvement. This one man continues to inspire millions of lives fourteen centuries after he lived.</p>
+
+
+
+            <div class="about-author d-flex p-4 bg-dark">
+              <div class="bio mr-5">
+                <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <h3>Rafsun Sheikh</h3>
+                <p>Lieutenant at Bangladesh Military Academy. Commissioned with 76 BMA Long Course at December,2018. Completed BSc in Military Science in the same year. And possess a great interest in Military History.</p>
+              </div>
+            </div>
+
+
+           <div class="pt-5 mt-5">
+              <div class="comment-form-wrap pt-5">
+                <h3 class="mb-5">Leave a comment</h3>
+                <form action="#" class="p-5 bg-dark">
+
+
+                  <div class="form-group">
+                    <button class="btn btn-primary">
+                     <li class="logged-in" style="display: none;">
+                 <a href="#" class="black-text modal-trigger" data-target="modal-create">Comment</a>
+                 </li>
+               </button>
+                    <!--<input type="submit" value="Post Comment" class="btn btn-primary">-->
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+
+            <!-- ADMIN ACTIONS -->
+              <form class="center-align admin-actions admin" style="margin: 40px auto; max-width: 300px; display: none;">
+                <input type="email" placeholder="User email" id="admin-email" required />
+                <button class="btn-small yellow darken-2 z-depth-0">Make admin</button>
+              </form>
+
+        <!--GUIDE LIST-->
+        <div class="comment-form-wrap pt-5">
+          <h3 class="mb-5">Comment List</h3>
+          <div class="container" style="margin-top: 20px;">
+            <ul class="collapsible z-depth-0 guides" style="border: none;">
+            </ul>
+          </div>
+        </div>
+
+
+        </div> <!-- .col-md-8 -->
+        </section>
+
+        <!--  <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box">
+              <form action="#" class="search-form">
+                <div class="form-group">
+                  <span class="icon icon-search"></span>
+                  <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
+                </div>
+              </form>
+            </div>
+            <div class="sidebar-box ftco-animate">
+            	<h3 class="heading-sidebar">Categories</h3>
+              <ul class="categories">
+                <li><a href="#">Interior Design <span>(12)</span></a></li>
+                <li><a href="#">Exterior Design <span>(22)</span></a></li>
+                <li><a href="#">Industrial Design <span>(37)</span></a></li>
+                <li><a href="#">Landscape Design <span>(42)</span></a></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Recent Blog</h3>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> March 12, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> March 12, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_3.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> March 12, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Tag Cloud</h3>
+              <div class="tagcloud">
+                <a href="#" class="tag-cloud-link">house</a>
+                <a href="#" class="tag-cloud-link">office</a>
+                <a href="#" class="tag-cloud-link">building</a>
+                <a href="#" class="tag-cloud-link">land</a>
+                <a href="#" class="tag-cloud-link">table</a>
+                <a href="#" class="tag-cloud-link">interior</a>
+                <a href="#" class="tag-cloud-link">exterior</a>
+                <a href="#" class="tag-cloud-link">industrial</a>
+              </div>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Paragraph</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About</h2>
+              <p>Started my journey from a lovely institution,Barisal Cadet College still carrying on my voyage to unknown,serving the country in most decorated uniform. And I am so proud be a soldier.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://twitter.com/rafsunsheikh" target="_blank"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/muhammad.r.sheikh.9" target="_blank"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/muhammad_rafsun_sheikh/" target="_blank"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html#home-section" target="_blank"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="index.html#about-section" target="_blank"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="index.html#services-section" target="_blank"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+                <li><a href="index.html#projects-section" target="_blank"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                <li><a href="index.html#contact-section" target="_blank"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Services</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html#projects-section" target="_blank"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
+                <li><a href="index.html#projects-section" target="_blank"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
+                <li><a href="index.html#projects-section" target="_blank"><span class="icon-long-arrow-right mr-2"></span>Blender Animation</a></li>
+                <li><a href="index.html#projects-section" target="_blank"><span class="icon-long-arrow-right mr-2"></span>Video Editing</a></li>
+                <li><a href="index.html#projects-section" target="_blank"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">MIST Officers Mess,Signal Gate,Dhaka Cantonment,Dhaka</span></li>
+                  <li><a href="tel://+8801796296538"><span class="icon icon-phone"></span><span class="text">+8801796296538</span></a></li>
+                  <li><a href="mailto:rafsunsheikh116@gmail.com"><span class="icon icon-envelope"></span><span class="text">rafsunsheikh116@gmail.com</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website solely belongs to Lt MD Rafsun Sheikh,Sigs,Bangladesh Army<i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://rafsunsheikh.github.io/Web/index.html" target="_blank">RafsunSheikh</a>
+  </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAlAeSwW4NxYFXE8QVPVBQudH3UZugk4IA",
+    authDomain: "rafsunsheikh-8028b.firebaseapp.com",
+    databaseURL: "https://rafsunsheikh-8028b.firebaseio.com",
+    projectId: "rafsunsheikh-8028b",
+    storageBucket: "rafsunsheikh-8028b.appspot.com",
+    messagingSenderId: "73706214621",
+    appId: "1:73706214621:web:19b88bcd8521b793743734",
+    measurementId: "G-28LG4Z0R11"
+      };
+      firebase.initializeApp(config);
+
+      // make auth and firestore references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const functions = firebase.functions();
+      // update firestore settings
+      db.settings({ timestampsInSnapshots: true });
+    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/index.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+  </body>
+</html>
